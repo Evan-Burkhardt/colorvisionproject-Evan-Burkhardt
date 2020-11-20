@@ -2,7 +2,7 @@
 
 ## Description
 
-As of right now this program is designed to identify color values in CSS files. Later this program will be updated to identify color values and ask the user if they want to change the color pattern. This program will look for key-phrases in the CSS code which will allow it to identify color values.
+This program is designed to identify background color values in CSS files. Later this program will be updated to identify background color values and ask the user if they want to change the color pattern. This program will look for key-phrases in the CSS code which will allow it to identify color values.
 
 ## Developer
 
@@ -62,13 +62,29 @@ This program uses an if-else statement to check that the file has been opened an
 ### Iteration
 
 This program uses a do-while loop to first run the block of code for the user so they can change the color patter for a color and then repeat to ask them if they want to make another color pattern change and it also uses a while loop to read through the lines in the file to find the keyword 'color: #'.
-
+```
 if(CSSfile.is_open()){
   ~~~~~~~~~~~~
 }else{cout << "could not open file\n";}
-
+```
 
 
 ### File Input and Output
 
 The file is opened and read by using 'CSSfile.open(fileName, CSSfile.in);' and is closed by using 'CSSfile.close();'
+
+# v0.2 Updates
+In v0.2 I added functions to the program and allowed the user to create their gradient.
+
+###Functions
+I added the functions:
+```
+string gradient ()
+```
+-which will allow the user to type in their preferred gradient by following instructions in case they do not know how.
+```
+int location (string text)
+```
+-which will allow the user to find the location of the keyphrase. This can be used in case they want to look inside the file themselves to alter it.
+
+I currently 11/19/2020 have not been able to get the location function to work within the main program so I have excluded it for the time being so that the main program can be run without any errors.
